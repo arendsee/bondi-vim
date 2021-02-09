@@ -27,14 +27,17 @@ let b:current_syntax = "bon"
 " -----------------------------------------------------------------------------
 
 
-syn keyword reserved let
+syn keyword statement let
+syn keyword statement in
+syn keyword statement if
+syn keyword statement then
+syn keyword statement else
+
 syn keyword reserved lin
 syn keyword reserved cpc
 syn keyword reserved ret
-syn keyword reserved in
-syn keyword reserved if
-syn keyword reserved then
-syn keyword reserved else
+syn keyword reserved of
+syn keyword reserved and
 syn keyword reserved fun
 syn keyword reserved extends
 
@@ -44,6 +47,7 @@ syn keyword constructor datatype
 " -----------------------------------------------------------------------------
 hi def link reserved Keyword
 hi def link constructor Type
+hi def link statement Statement
 
 
 
@@ -75,8 +79,13 @@ syn match operator />/
 syn match operator /\~/
 syn match operator /-/
 syn match operator /+/
+syn match operator /\*/
+syn match operator /\\/
+syn match operator /\//
 syn match operator /\^/
 syn match operator /=/
+syn match operator /,/
+syn match operator /\./
 syn match operator /|/
 syn match operator /:/
 syn match operator /;/
